@@ -46,7 +46,9 @@
 //             }
 //         });
 
-gsap.to('.front-text', {
+const tl = gsap.timeline();
+
+tl.to('.front-text', {
   x: '130%',
   ease: "power2",
   scrollTrigger: {
@@ -58,3 +60,30 @@ gsap.to('.front-text', {
     markers: true
   }
 })
+// .to('.back-img',{
+//   ease:"power4",
+//   scale:1.7,
+//   opacity:0.2,
+//   scrollTrigger:{
+//     trigger:".hero",
+//     start:'top top',
+//     end:'bottom bottom',
+//     pin:true,
+//     scrub:true,
+//     markers:true
+//   }
+// })
+.to('.back-img',{
+  scale:1.7,
+  opacity:0,
+  ease:'power2.Out',
+  scrollTrigger:{
+    trigger:'.back-img',
+    start:'top top',
+    end:'bottom top',
+    // pin:true,
+    scrub:true,
+    markers:true
+  }
+})
+
