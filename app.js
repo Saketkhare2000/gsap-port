@@ -41,19 +41,20 @@
 //             onUpdate: self => {
 //                     tl.timeScale(self.getVelocity() / 100);
 //               direction = self.direction
-              
+
 //               console.log(direction)
 //             }
 //         });
 
 gsap.to('.front-text', {
-    xPercent:70,
-    ease: "power2",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top center",
-      end: "bottom top",
-      scrub: true,
-      markers:true
-    }
-  })
+  x: '130%',
+  ease: "power2",
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    pin: true,
+    scrub: true,
+    markers: true
+  }
+})
