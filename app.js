@@ -76,6 +76,7 @@ tl.to('.front-text', {
 .to('.back-img',{
   scale:1.7,
   opacity:0,
+  offset:"-+=1",
   ease:'power2.Out',
   scrollTrigger:{
     trigger:'.back-img',
@@ -83,7 +84,7 @@ tl.to('.front-text', {
     end:'bottom top',
     // pin:true,
     scrub:true,
-    markers:true
+    // markers:true
   }
 })
 
